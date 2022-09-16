@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: update server
+    apt:
+      update_cache: yes
+  -  name: install apache
+     apt:
+      name: apache2
+  -  name: upgrade
+     apt:
+      upgrade: dist
